@@ -1,0 +1,21 @@
+plugins {
+	id 'com.github.johnrengelman.shadow' version '7.1.2'
+	id 'application'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+version = "1.0"
+
+repositories {
+	maven {
+		url "https://maven.minecraftforge.net/"
+	}
+}
+
+dependencies {
+	implementation "net.minecraftforge:srgutils:0.4.+"
+}
+
+application {
+	mainClass = "com.coehlrich.remappatches.Main"
+}
