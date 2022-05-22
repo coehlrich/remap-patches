@@ -8,11 +8,7 @@
 name: Gradle Package
 
 on:
-  create:
-    tags:
-    
-permissions:
-  contents: write
+  push:
 
 jobs:
   build:
@@ -40,4 +36,5 @@ jobs:
     - name: Create release
       uses: softprops/action-gh-release@v1
       with:
+        tag_name: "1.0.${{github.run_number}}"
         files: build/libs/*
