@@ -20,9 +20,9 @@ public class Main {
     public static void main(String[] args) {
         try {
             Pattern pattern = Pattern.compile("(m|f|p)_\\d+_");
-            File original = new File(args[1]);
-            File newMappingsFile = new File(args[2]);
-            Path remapPath = Path.of(args[3]);
+            File original = new File(args[0]);
+            File newMappingsFile = new File(args[1]);
+            Path remapPath = Path.of(args[2]);
             IMappingFile originalMappings = IMappingFile.load(original);
             IMappingFile newMappings = IMappingFile.load(newMappingsFile);
 
