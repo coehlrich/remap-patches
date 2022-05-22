@@ -10,6 +10,9 @@ name: Gradle Package
 on:
   create:
     tags:
+    
+permissions:
+  contents: write
 
 jobs:
   build:
